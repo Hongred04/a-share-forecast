@@ -18,7 +18,7 @@ vendor 运行时，它指到 E: 盘，cmd 看不到。于是双击 `启动.bat` 
 
 用法
 ----
-    python packaging/build_runtime.py --dest "C:/Users/macro/Desktop/A股预判"
+    python packaging/build_runtime.py --dest "D:/A股预判"
     python packaging/build_runtime.py --dest .        # 打在本项目里
 
 注意
