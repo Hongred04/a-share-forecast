@@ -1,0 +1,50 @@
+# 运行时产物 —— 不进版本库
+#
+# 这几项都是"跑出来的"，不是"写出来的"：
+#   data/oracle.db   26MB SQLite，含 800 日回放与自建 ETF 份额表，每天变大
+#   data/state.json  每次构建覆盖的快照，体积随股票数增长
+#   data/cache/      两融/ETF 份额/尾盘线的磁盘缓存，纯派生数据
+# 提交它们会让仓库迅速膨胀到几十 MB，且每次运行都产生无意义 diff。
+
+data/oracle.db
+data/oracle.db-journal
+data/oracle.db-wal
+data/oracle.db-shm
+data/state.json
+data/cache/
+data/logs/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.venv/
+venv/
+env/
+
+# 打包产物与内嵌运行时（可用 packaging/build_runtime.py 重建，体积几十 MB）
+runtime/
+build/
+dist/
+*.spec
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# 本地临时产物
+*.log
+tmp/
+_measure*.html
+
+# AI 工具工作区（含对话记录与开发日志，不属于项目代码）
+.workbuddy/
