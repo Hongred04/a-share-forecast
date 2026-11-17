@@ -448,8 +448,9 @@ ETF 的**份额**（≈ 流通市值 / 价格）每日落库到 `etf_share` 表�
 
 全部走东方财富公开行情端点（与 AKShare / efinance 底层同源），**无需注册、无需 Token**。
 
-> 端点、参数、字段单位与踩坑清单的完整版在 **[docs/data-sources.md](docs/data-sources.md)**，
-> 那份是能直接拿去复用的手册；本节只讲本系统怎么用它们。
+> > 端点、参数、字段单位与踩坑清单已单独整理成公开仓库
+> **[a-share-data-sources](https://github.com/Hongred04/a-share-data-sources)**（附可运行的示例代码），
+> 本节只讲本系统怎么用它们。
 
 一共 **10 个远程端点 + 1 个本地日历**，按用途分四组：
 
